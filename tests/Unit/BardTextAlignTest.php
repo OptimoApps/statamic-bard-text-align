@@ -11,7 +11,6 @@
 
 namespace OptimoApps\BardTextAlign\Tests\Unit;
 
-
 use OptimoApps\BardTextAlign\Tests\TestCase;
 use Statamic\Fieldtypes\Bard;
 

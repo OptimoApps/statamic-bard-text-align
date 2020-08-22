@@ -82,6 +82,5 @@ class TestCase extends OrchestraTestCase
 
         // Assume the pro edition within tests
         $app['config']->set('statamic.editions.pro', true);
-
     }
 }
