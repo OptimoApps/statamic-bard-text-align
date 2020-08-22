@@ -1,0 +1,5 @@
+/*!
+    * tiptap-utils v1.10.0
+    * (c) 2020 Scrumpy UG (limited liability)
+    * @license MIT
+    */
