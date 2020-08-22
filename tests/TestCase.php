@@ -53,9 +53,9 @@ class TestCase extends OrchestraTestCase
         parent::getEnvironmentSetUp($app);
 
         $app->make(Manifest::class)->manifest = [
-            'optimoapps/statamic-rich-snippet' => [
-                'id' => 'optimoapps/statamic-rich-snippet',
-                'namespace' => 'OptimoApps\\RichSnippet\\',
+            'optimoapps/statamic-bard-text-align' => [
+                'id' => 'optimoapps/statamic-bard-text-align',
+                'namespace' => 'OptimoApps\\BardTextAlign\\',
             ],
         ];
     }
@@ -83,8 +83,5 @@ class TestCase extends OrchestraTestCase
         // Assume the pro edition within tests
         $app['config']->set('statamic.editions.pro', true);
 
-        Statamic::pushCpRoutes(function () {
-            return require realpath(__DIR__.'/../routes/cp.php');
-        });
     }
 }
