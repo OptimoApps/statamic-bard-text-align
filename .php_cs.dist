@@ -129,7 +129,6 @@ $project_path = __DIR__;
 $finder = Finder::create()
     ->in([
         $project_path . '/src',
-        $project_path . '/routes',
         $project_path . '/tests',
     ])
     ->name('*.php')
