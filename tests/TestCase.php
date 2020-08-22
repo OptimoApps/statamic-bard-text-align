@@ -74,7 +74,7 @@ class TestCase extends OrchestraTestCase
         ];
 
         foreach ($configs as $config) {
-            $app['config']->set("statamic.$config", require(__DIR__ . "/../vendor/statamic/cms/config/{$config}.php"));
+            $app['config']->set("statamic.$config", require(__DIR__."/../vendor/statamic/cms/config/{$config}.php"));
         }
 
         // Setting the user repository to the default flat file system
@@ -84,7 +84,7 @@ class TestCase extends OrchestraTestCase
         $app['config']->set('statamic.editions.pro', true);
 
         Statamic::pushCpRoutes(function () {
-            return require realpath(__DIR__ . '/../routes/cp.php');
+            return require realpath(__DIR__.'/../routes/cp.php');
         });
     }
 }

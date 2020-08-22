@@ -11,7 +11,6 @@
 
 namespace OptimoApps\BardTextAlign;
 
-
 use Scrumpy\ProseMirrorToHtml\Marks\Mark;
 
 class TextAlign extends Mark
@@ -29,9 +28,9 @@ class TextAlign extends Mark
         return [
             ['tag' => 'span',
                 'attrs' => [
-                    'style' => "text-align:{$this->mark->attrs->align};display :block"
-                ]
-            ]
+                    'style' => "text-align:{$this->mark->attrs->align};display :block",
+                ],
+            ],
         ];
     }
 }

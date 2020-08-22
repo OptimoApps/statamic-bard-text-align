@@ -11,7 +11,6 @@
 
 namespace OptimoApps\BardTextAlign;
 
-
 use Statamic\Fieldtypes\Bard\Augmentor;
 use Statamic\Providers\AddonServiceProvider;
 
@@ -21,7 +20,8 @@ class ServiceProvider extends AddonServiceProvider
         __DIR__.'/../dist/js/textalign.js',
     ];
 
-    public function boot(){
+    public function boot()
+    {
         parent::boot();
         Augmentor::addMark(TextAlign::class);
     }
