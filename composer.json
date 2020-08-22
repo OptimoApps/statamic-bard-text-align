@@ -11,6 +11,11 @@
       "OptimoApps\\BardTextAlign\\": "src"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "OptimoApps\\BardTextAlign\\Tests\\": "tests"
+    }
+  },
   "homepage": "https://optimoapps.com",
   "license": "proprietary",
   "type": "statamic-addon",
