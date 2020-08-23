@@ -15,7 +15,7 @@ use Scrumpy\ProseMirrorToHtml\Marks\Mark;
 
 class TextAlign extends Mark
 {
-    protected $markType = 'text-align';
+    protected $markType = 'textAlign';
     protected $tagName = 'span';
 
     public function matching()

@@ -7,11 +7,11 @@
  *  *
  *
  */
-import {markInputRule, updateMark} from 'tiptap-commands';
-
+const {core: commands} = Statamic.$bard.tiptap;
+const {updateMark, markInputRule} = commands;
 export default class TextAlign {
     name() {
-        return 'text-align';
+        return 'textAlign';
     }
 
     schema() {
