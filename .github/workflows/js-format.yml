@@ -12,6 +12,7 @@ jobs:
           node-version: "12.x"
       - name: Format
         run: |
+          npm install
           npm ci
           npm run format
       - name: Commit changes
