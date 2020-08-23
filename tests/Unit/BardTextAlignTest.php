@@ -31,7 +31,7 @@ class BardTextAlignTest extends TestCase
             [
                 'type' => 'paragraph',
                 'content' => [
-                    ['type' => 'text', 'marks' => [['type' => 'text-align', 'attrs' => ['align' => 'center']]], 'text' => 'Text Align Center'],
+                    ['type' => 'text', 'marks' => [['type' => 'textAlign', 'attrs' => ['align' => 'center']]], 'text' => 'Text Align Center'],
                 ],
             ],
         ];
