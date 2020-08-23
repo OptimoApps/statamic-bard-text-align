@@ -7,45 +7,47 @@
  *  *
  *
  */
-const {core: commands} = Statamic.$bard.tiptap;
-const {updateMark, markInputRule} = commands;
+const { core: commands } = Statamic.$bard.tiptap;
+const { updateMark, markInputRule } = commands;
 export default class TextAlign {
-    name() {
-        return 'textAlign';
-    }
+  name() {
+    return "textAlign";
+  }
 
-    schema() {
-        return {
-            attrs: {
-                align: {
-                    default: 'left',
-                },
-            },
-            parseDOM: [
-                {
-                    style: 'text-align',
-                    getAttrs: value => ({align: value}),
-                },
-            ],
-            toDOM: mark => ['span', {style: `text-align: ${mark.attrs.align}; display: block`}, 0],
-        };
-    }
+  schema() {
+    return {
+      attrs: {
+        align: {
+          default: "left",
+        },
+      },
+      parseDOM: [
+        {
+          style: "text-align",
+          getAttrs: (value) => ({ align: value }),
+        },
+      ],
+      toDOM: (mark) => [
+        "span",
+        { style: `text-align: ${mark.attrs.align}; display: block` },
+        0,
+      ],
+    };
+  }
 
-    commands({type}) {
-        return attrs => updateMark(type, attrs);
-    }
+  commands({ type }) {
+    return (attrs) => updateMark(type, attrs);
+  }
 
-    pasteRules({type}) {
-        return []
-    }
+  pasteRules({ type }) {
+    return [];
+  }
 
-    inputRules({type}) {
-        return [
-            markInputRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, type),
-        ];
-    }
+  inputRules({ type }) {
+    return [markInputRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, type)];
+  }
 
-    plugins() {
-        return [];
-    }
+  plugins() {
+    return [];
+  }
 }

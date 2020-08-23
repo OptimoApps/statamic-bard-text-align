@@ -11,9 +11,9 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^2.0.4",
     "cross-env": "^7.0",
     "laravel-mix": "^5.0",
+    "prettier": "2.0.5",
     "vue-template-compiler": "^2.6.11"
   }
 }
