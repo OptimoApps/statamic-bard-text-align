@@ -11,3 +11,6 @@
 ## Bard Text Align is a Commercial Addon.
 
 You can use it for free while in development, but requires a license to use on a live site. Learn more or buy a license on [The Statamic Marketplace](https://statamic.com/marketplace/addons/statamic-bard-text-align)!
+
+## Demo
+![alt text](https://github.com/optimoapps/statamic-bard-text-align/blob/master/bard-text-align.gif "Demo")
