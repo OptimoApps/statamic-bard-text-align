@@ -11,11 +11,13 @@
 <template>
   <div class="inline-block relative">
     <button
-        class="bard-toolbar-button"
-        :class="{ 'active': getMarkAttrs('textAlign').align === this.button.args.align }"
-        v-html="button.html"
-        v-tooltip="button.text"
-        @click="setAlignment()"
+      class="bard-toolbar-button"
+      :class="{
+        active: getMarkAttrs('textAlign').align === this.button.args.align,
+      }"
+      v-html="button.html"
+      v-tooltip="button.text"
+      @click="setAlignment()"
     />
   </div>
 </template>
@@ -25,12 +27,12 @@ export default {
   data() {
     return {
       getMarkAttrs: this.editor.getMarkAttrs.bind(this.editor),
-    }
+    };
   },
   methods: {
     setAlignment() {
-      this.editor.commands.textAlign({align: this.button.args.align});
+      this.editor.commands.textAlign({ align: this.button.args.align });
     },
-  }
-}
+  },
+};
 </script>
