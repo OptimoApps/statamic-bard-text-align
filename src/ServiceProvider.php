@@ -17,7 +17,7 @@ use Statamic\Providers\AddonServiceProvider;
 class ServiceProvider extends AddonServiceProvider
 {
     protected $scripts = [
-        __DIR__ . '/../dist/js/textalign.js',
+        __DIR__.'/../dist/js/textalign.js',
     ];
 
     public function boot()
