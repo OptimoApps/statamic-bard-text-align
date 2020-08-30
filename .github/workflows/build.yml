@@ -21,5 +21,7 @@ jobs:
         with:
           commit_message: publish dist
           branch: ${{ github.head_ref }}
+          push_options: '--force'
+          skip_dirty_check: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
