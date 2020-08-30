@@ -25,9 +25,12 @@ jobs:
       - name: Run pretier
         run: yarn run prettier --write .
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4.4.1
         with:
-          commit_message: Apply prettier changes
+          commit_message: Apply Prettier changes
           branch: ${{ github.head_ref }}
+          push_options: '--force'
+          skip_dirty_check: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
