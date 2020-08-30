@@ -14,18 +14,20 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
 
       - name: Install
         run: yarn install
         env:
           CI: true
 
-      - name: Run prettier
+      - name: Run pretier
         run: yarn run prettier --write .
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply prettier changes
+          branch: ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
