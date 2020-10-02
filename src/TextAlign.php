@@ -11,19 +11,19 @@
 
 namespace OptimoApps\BardTextAlign;
 
-use Scrumpy\ProseMirrorToHtml\Marks\Mark;
+use ProseMirrorToHtml\Marks\Mark;
 
 class TextAlign extends Mark
 {
     protected $markType = 'textAlign';
     protected $tagName = 'span';
 
-    public function matching()
+    public function matching(): bool
     {
         return $this->mark->type === $this->markType;
     }
 
-    public function tag()
+    public function tag(): ?array
     {
         return [
             ['tag' => 'span',
