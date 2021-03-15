@@ -26,7 +26,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.4|^8.0",
     "statamic/cms": "^3.0.14"
   },
   "require-dev": {
@@ -34,8 +34,8 @@
     "phpunit/phpunit": "^8.4|^9.0"
   },
   "scripts": {
-    "test": "vendor/bin/phpunit",
-    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-html coverage"
   },
   "config": {
     "sort-packages": true
