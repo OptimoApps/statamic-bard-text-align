@@ -1,3 +1,4 @@
+<!-- statamic:hide -->
 # Statamic Bard Text Align Extension
 
 ![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge&link=https://statamic.com)
@@ -5,6 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/optimoapps/statamic-bard-text-align.svg?style=for-the-badge)](https://packagist.org/packages/optimoapps/statamic-bard-text-align)
 ![run-tests](https://github.com/OptimoApps/statamic-bard-text-align/workflows/run-tests/badge.svg)
 ![Check & fix styling](https://github.com/OptimoApps/statamic-bard-text-align/workflows/Check%20&%20fix%20styling/badge.svg)
+<!-- /statamic:hide -->
 
 > This addon helps you to align the text in Bard Editor
 
