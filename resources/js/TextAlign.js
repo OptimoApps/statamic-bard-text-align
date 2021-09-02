@@ -29,7 +29,7 @@ export default class TextAlign {
       ],
       toDOM: (mark) => [
         "span",
-        { style: `text-align: ${mark.attrs.align}; display: block` },
+        { style: `text-align: ${mark.attrs.align};` },
         0,
       ],
     };
