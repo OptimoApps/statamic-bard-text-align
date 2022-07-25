@@ -28,7 +28,7 @@ class TextAlign extends Mark
         return [
             ['tag' => 'span',
                 'attrs' => [
-                    'style' => "text-align:{$this->mark->attrs->align};display :block",
+                    'style' => "text-align:{$this->mark->attrs->align};",
                 ],
             ],
         ];
