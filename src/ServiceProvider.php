@@ -23,6 +23,6 @@ class ServiceProvider extends AddonServiceProvider
     public function boot()
     {
         parent::boot();
-        Augmentor::addMark(TextAlign::class);
+        Augmentor::replaceExtension('textAlign', new TextAlign);
     }
 }

@@ -13,7 +13,7 @@
     <button
       class="bard-toolbar-button"
       :class="{
-        active: getMarkAttrs('textAlign').align === this.button.args.align,
+        active: attributeAlignment === this.button.args.align,
       }"
       v-html="button.html"
       v-tooltip="button.text"
@@ -24,10 +24,10 @@
 <script>
 export default {
   mixins: [BardToolbarButton],
-  data() {
-    return {
-      getMarkAttrs: this.editor.getMarkAttrs.bind(this.editor),
-    };
+  computed: {
+    attributeAlignment() {
+      return this.editor.getAttributes('textAlign').align;
+    }
   },
   methods: {
     setAlignment() {
