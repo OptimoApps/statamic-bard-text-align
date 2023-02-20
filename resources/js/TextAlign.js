@@ -42,10 +42,10 @@ const TextAlign = Mark.create({
   addCommands() {
     return {
       textAlign: (attrs) => ({ commands }) => {
-        return commands.updateAttributes('textAlign', attrs);
-      }
+        return commands.updateAttributes("textAlign", attrs);
+      },
     };
-  }
+  },
 });
 
 export default TextAlign;

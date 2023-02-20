@@ -26,8 +26,8 @@ export default {
   mixins: [BardToolbarButton],
   computed: {
     attributeAlignment() {
-      return this.editor.getAttributes('textAlign').align;
-    }
+      return this.editor.getAttributes("textAlign").align;
+    },
   },
   methods: {
     setAlignment() {
