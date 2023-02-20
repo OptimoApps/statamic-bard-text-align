@@ -11,10 +11,9 @@
 import TextAlign from "./TextAlign";
 import TextAlignButton from "./TextAlignButton";
 
-Statamic.$bard.extend(({ mark }) => mark(new TextAlign()));
+Statamic.$bard.extend(() => TextAlign);
 Statamic.$bard.buttons((buttons) => {
-  const indexOfBold = _.findIndex(buttons, { command: "italic" });
-  buttons.splice(indexOfBold + 1, 0, {
+  buttons.splice(_.findIndex(buttons, { name: "alignleft" }), 1, {
     name: "left",
     text: "Text Align Left",
     command: "textAlign",
@@ -22,7 +21,7 @@ Statamic.$bard.buttons((buttons) => {
     icon: "align-left",
     component: TextAlignButton,
   });
-  buttons.splice(indexOfBold + 2, 0, {
+  buttons.splice(_.findIndex(buttons, { name: "alignright" }), 1, {
     name: "right",
     text: "Text Align Right",
     command: "textAlign",
@@ -30,7 +29,7 @@ Statamic.$bard.buttons((buttons) => {
     icon: "align-right",
     component: TextAlignButton,
   });
-  buttons.splice(indexOfBold + 3, 0, {
+  buttons.splice(_.findIndex(buttons, { name: "aligncenter" }), 1, {
     name: "center",
     text: "Text Align Center",
     command: "textAlign",
@@ -38,7 +37,7 @@ Statamic.$bard.buttons((buttons) => {
     icon: "align-center",
     component: TextAlignButton,
   });
-  buttons.splice(indexOfBold + 4, 0, {
+  buttons.splice(_.findIndex(buttons, { name: "alignjustify" }), 1, {
     name: "justify",
     text: "Text Align Justify",
     command: "textAlign",

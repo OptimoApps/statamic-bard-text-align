@@ -11,26 +11,30 @@
 
 namespace OptimoApps\BardTextAlign;
 
-use ProseMirrorToHtml\Marks\Mark;
+use Tiptap\Core\Mark;
+use Tiptap\Utils\HTML;
 
 class TextAlign extends Mark
 {
-    protected $markType = 'textAlign';
-    protected $tagName = 'span';
+    public static $name = 'textAlign';
 
-    public function matching(): bool
-    {
-        return $this->mark->type === $this->markType;
-    }
-
-    public function tag(): ?array
+    public function parseHTML()
     {
         return [
-            ['tag' => 'span',
-                'attrs' => [
-                    'style' => "text-align:{$this->mark->attrs->align};",
-                ],
+            [
+                'style' => 'text-align',
             ],
+        ];
+    }
+
+    public function renderHTML($mark, $attributes = [])
+    {
+        return [
+            'span',
+            HTML::mergeAttributes([
+                'style' => "text-align:{$mark->attrs->align}; display: block;",
+            ], $attributes),
+            0,
         ];
     }
 }
