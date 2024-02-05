@@ -1,3 +1,6 @@
+# Update From Bard Text Align Extension will not be updated in future
+Tagged V1.0.4 is now available, compatible with Statamic 4.0. We believe this release addresses the reported issue. Please note that as this addon has been integrated into the Statamic core, there will be no further updates from our end.
+
 <!-- statamic:hide -->
 # Statamic Bard Text Align Extension
 
